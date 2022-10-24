@@ -13,4 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', \App\Http\Controllers\PusherController::class);
+Route::get('/', \App\Http\Controllers\Pusher\IndexController::class);
+Route::post('/', \App\Http\Controllers\Pusher\BroadcastController::class);
