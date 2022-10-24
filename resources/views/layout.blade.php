@@ -23,7 +23,7 @@
           crossorigin="anonymous"></script>
   <!-- End Bootstrap -->
 
-  <link rel="stylesheet" href="/build/assets/app.505083e0.css/">
+  <link rel="stylesheet" href="/app.css/">
 
   <script>
     // TODO: Enable pusher logging - don't include this in production
