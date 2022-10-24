@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <title>Pusher Test</title>
+    <title>Chat Laravel Pusher | Edlin App</title>
+    <link rel="icon" href="https://assets.edlin.app/favicon/favicon.ico"/>
     <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
     <script>
 
