@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Pusher\BroadcastController;
+use App\Http\Controllers\Pusher\IndexController;
+use App\Http\Controllers\Pusher\MessageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', \App\Http\Controllers\Pusher\IndexController::class);
-Route::post('/', \App\Http\Controllers\Pusher\BroadcastController::class);
+Route::get('/', IndexController::class);
+Route::post('/', BroadcastController::class);
+Route::post('/message', MessageController::class);
