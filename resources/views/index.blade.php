@@ -16,48 +16,79 @@
 </head>
 
 <body>
-<div class="center">
-  <div class="chat">
-    <div class="contact bar">
-      <div class="pic stark"></div>
-      <div class="name">
-        Ross Edlin
-      </div>
-      <div class="seen">
-        Today at 12:56
-      </div>
-    </div>
-    <div class="messages" id="chat">
-      <div class="time">
-        Today at 11:41
-      </div>
-      @include('right', ['message' => "Hey, man! What's up, Mr Stark? 👋"])
-      @include('left', ['message' => "Kid, where'd you come from?"])
-      @include('right', ['message' => "Field trip! 🤣"])
-      @include('right', ['message' => "Uh, what is this guy's problem, Mr. Stark? 🤔"])
-      @include('left', ['message' => "Uh, he's from space, he came here to steal a necklace from a wizard."])
-    </div>
-    <div class="input">
-      <i class="fas fa-camera"></i>
-      <i class="far fa-laugh-beam"></i>
-      <input placeholder="Type your message here!" type="text" />
-      <i class="fas fa-microphone"></i>
 
+<div class="container">
 
-{{--      <form id="chat-form" method="post" action="/">--}}
-{{--        <input type="hidden" name="_token" value="">--}}
-{{--        <div class="mb-3">--}}
-{{--          <div class="input-group mb-0">--}}
-{{--            <div class="input-group-prepend">--}}
-{{--              <button type="submit" class="btn"><em class="fa fa-send"></em></button>--}}
-{{--            </div>--}}
-{{--            <input type="text" id="message" name="message" class="form-control" placeholder="Enter text here...">--}}
-{{--          </div>--}}
-{{--        </div>--}}
-{{--      </form>--}}
+  <!-- Header -->
+  <div class="header">
+    <div class="d-flex">
+      <img src="https://i.pravatar.cc/150?img=5" alt="Avatar">
+      <div class="overflow-hidden ms-3">
+        <a class="text-dark mb-0 h6 d-block text-truncate" href="/page-chat">
+          Cristino Murphy
+        </a>
+        <small class="text-muted">
+          <i class="mdi mdi-checkbox-blank-circle text-success on-off align-text-bottom"></i> Online
+        </small>
+      </div>
     </div>
   </div>
+  <!-- End Header -->
+
+  <!-- Chat -->
+  <div class="p-4 list-unstyled mb-0 chat">
+    <div style="margin: -24px;">
+      <div>
+        <div style="right: 0px; bottom: 0px;">
+          <div style="height: auto; overflow: hidden scroll;">
+            <div style="padding: 24px;">
+              <li>
+                <div class="d-inline-block">
+                  <div class="d-flex chat-type mb-3">
+                    <div class="position-relative">
+                      <img src="https://i.pravatar.cc/150?img=5" alt="Avatar">
+                      <i class="mdi mdi-checkbox-blank-circle text-success on-off align-text-bottom"></i></div>
+                    <div class="chat-msg" style="max-height: 500px;"><p
+                        class="text-muted small msg px-3 py-2 bg-light rounded mb-1">Nice to meet you</p></div>
+                  </div>
+                </div>
+              </li>
+              <li class="chat-right">
+                <div class="d-inline-block">
+                  <div class="d-flex chat-type mb-3">
+                    <div class="position-relative chat-user-image">
+                      <img src="https://i.pravatar.cc/150?img=5"
+                           class="avatar avatar-md-sm rounded-circle border shadow"
+                           alt="">
+                      <i class="mdi mdi-checkbox-blank-circle text-success on-off align-text-bottom"></i></div>
+                    <div class="chat-msg" style="max-height: 500px;"><p
+                        class="text-muted small msg px-3 py-2 bg-light rounded mb-1">Welcome</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Chat -->
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Enter Message...">
+      </div>
+      <div class="col">
+        <a href="/page-chat"><i></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
 </div>
+
 </body>
 
 <script>
