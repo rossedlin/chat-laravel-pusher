@@ -1,4 +1,10 @@
-@import "container";
-@import "header";
-@import "chat";
-@import "footer";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+//Common
+@import "common/container";
+@import "common/img";
+
+//App
+@import "header/header";
+@import "chat/chat";
+@import "footer/footer";
