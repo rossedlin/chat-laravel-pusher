@@ -71,7 +71,7 @@
       message: data.message,
     })
       .done(function (res) {
-        $(".row").last().after(res.html);
+        $(".chat > .message").last().after(res.html);
         $(document).scrollTop($(document).height());
       });
   });
