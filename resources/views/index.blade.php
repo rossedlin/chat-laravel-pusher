@@ -3,6 +3,7 @@
 <head>
   <title>Chat Laravel Pusher | Edlin App</title>
   <link rel="icon" href="https://assets.edlin.app/favicon/favicon.ico"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- JavaScript -->
   <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
@@ -16,7 +17,6 @@
 </head>
 
 <body>
-
 <div class="container">
 
   <!-- Header -->
@@ -52,8 +52,8 @@
 
   </div>
   <!-- End Footer -->
-</div>
 
+</div>
 </body>
 
 <script>
