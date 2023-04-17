@@ -25,7 +25,7 @@
       <img src="https://i.pravatar.cc/150?img=5" alt="Avatar">
       <div class="overflow-hidden ms-3">
         <a class="text-dark mb-0 h6 d-block text-truncate" href="/page-chat">
-          Cristino Murphy
+          Ross Edlin
         </a>
         <small class="text-muted">
           <i class="mdi mdi-checkbox-blank-circle text-success on-off align-text-bottom"></i> Online
@@ -36,55 +36,20 @@
   <!-- End Header -->
 
   <!-- Chat -->
-  <div class="p-4 list-unstyled mb-0 chat">
-    <div style="margin: -24px;">
-      <div>
-        <div style="right: 0px; bottom: 0px;">
-          <div style="height: auto; overflow: hidden scroll;">
-            <div style="padding: 24px;">
-              <li>
-                <div class="d-inline-block">
-                  <div class="d-flex chat-type mb-3">
-                    <div class="position-relative">
-                      <img src="https://i.pravatar.cc/150?img=5" alt="Avatar">
-                      <i class="mdi mdi-checkbox-blank-circle text-success on-off align-text-bottom"></i></div>
-                    <div class="chat-msg" style="max-height: 500px;"><p
-                        class="text-muted small msg px-3 py-2 bg-light rounded mb-1">Nice to meet you</p></div>
-                  </div>
-                </div>
-              </li>
-              <li class="chat-right">
-                <div class="d-inline-block">
-                  <div class="d-flex chat-type mb-3">
-                    <div class="position-relative chat-user-image">
-                      <img src="https://i.pravatar.cc/150?img=5"
-                           class="avatar avatar-md-sm rounded-circle border shadow"
-                           alt="">
-                      <i class="mdi mdi-checkbox-blank-circle text-success on-off align-text-bottom"></i></div>
-                    <div class="chat-msg" style="max-height: 500px;"><p
-                        class="text-muted small msg px-3 py-2 bg-light rounded mb-1">Welcome</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="chat">
+    @include('right', ['message' => "Hey! What's up!  👋"])
+    @include('left', ['message' => "Ask a friend to open this link and you can chat with them!"])
   </div>
   <!-- End Chat -->
 
   <!-- Footer -->
   <div class="footer">
-    <div class="row">
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Enter Message...">
-      </div>
-      <div class="col">
-        <a href="/page-chat"><i></i></a>
-      </div>
-    </div>
+    <form id="chat-form" method="post" action="/">
+      <input type="hidden" name="_token" value="">
+      <input type="text" id="message" name="message" placeholder="Enter message...">
+      <button type="submit" class="btn"></button>
+    </form>
+
   </div>
   <!-- End Footer -->
 </div>
@@ -122,7 +87,7 @@
     $.post("/", data)
       .done(function (res) {
         console.log(res);
-        $(".row").last().after(res.html);
+        $(".chat > .message").last().after(res.html);
         $(document).scrollTop($(document).height());
       });
   });
