@@ -13978,10 +13978,11 @@ textarea.form-control-lg {
   display: inline-flex;
   text-align: center;
   cursor: pointer;
-  border: 5px solid #0d6efd;
+  border: 1px solid #484848;
   border-radius: 5px;
-  width: 2.5rem;
-  height: 2.5rem;
+  margin: 3px;
+  width: 2.35rem;
+  height: 2.35rem;
   background: url("https://assets.edlin.app/icons/font-awesome/paper-plane/paper-plane-regular.svg") center no-repeat;
 }
 

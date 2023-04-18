@@ -37,7 +37,7 @@
 
   <!-- Chat -->
   <div class="chat">
-    @include('right', ['message' => "Hey! What's up!  👋"])
+    @include('left', ['message' => "Hey! What's up!  👋"])
     @include('left', ['message' => "Ask a friend to open this link and you can chat with them!"])
   </div>
   <!-- End Chat -->
@@ -55,14 +55,10 @@
 </body>
 
 <script>
-  // TODO: Enable pusher logging - don't include this in production
-  Pusher.logToConsole = true;
-
-  const pusher = new Pusher('{{config('pusher.app.key')}}', {
-    cluster: 'eu'
-  });
-
+  const pusher = new Pusher('{{config('pusher.app.key')}}', {cluster: 'eu'});
   const channel = pusher.subscribe('{{config('pusher.channel')}}');
+
+  //Receive messages
   channel.bind('{{config('pusher.event')}}', function (data) {
     $.post("/message", {
       _token: '{{csrf_token()}}',
@@ -74,15 +70,15 @@
       });
   });
 
+  //Send messages
   $("form").submit(function (event) {
     event.preventDefault();
 
-    const data = {
+    $.post("/", {
       _token: '{{csrf_token()}}',
-      message: $("#chat-form #message").val(),
-    };
-
-    $.post("/", data)
+      message: $("form #message").val(),
+      socket_id: pusher.connection.socket_id,
+    })
       .done(function (res) {
         $(".chat > .message").last().after(res.html);
         $(document).scrollTop($(document).height());
