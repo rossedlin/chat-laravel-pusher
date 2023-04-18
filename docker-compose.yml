@@ -7,3 +7,8 @@ services:
        - "80:80"
      volumes:
        - ./:/var/www
+
+   build:
+       image: rossedlin/nodejs:18
+       volumes:
+           - ./:/home/node/app
