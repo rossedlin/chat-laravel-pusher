@@ -11,5 +11,39 @@
     box-sizing: border-box;
     list-style: none;
     margin-bottom: 0 !important;
-    padding: 1.5rem !important;
+    padding: 1rem !important;
+
+    .left {
+        text-align: left;
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .message {
+        margin-bottom: 1rem;
+
+        p {
+            display: inline-flex;
+            font-weight: var(--bs-body-font-weight);
+            line-height: var(--bs-body-line-height);
+            text-align: var(--bs-body-text-align);
+            font-family: "Nunito", sans-serif;
+            word-wrap: break-word;
+            list-style: none;
+            box-sizing: border-box;
+            font-size: 0.875em;
+            margin: 0.25rem;
+            padding: 0.5rem 1rem !important;
+            color: #6c757d !important;
+            background-color: rgba(var(--bs-light-rgb), 1) !important;
+            border-radius: var(--bs-border-radius) !important;
+        }
+
+        img {
+            display: inline-flex;
+            margin: 0.25rem;
+        }
+    }
 }

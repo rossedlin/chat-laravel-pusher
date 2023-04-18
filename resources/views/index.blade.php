@@ -22,7 +22,7 @@
   <!-- Header -->
   <div class="header">
     <div class="d-flex">
-      <img src="https://i.pravatar.cc/150?img=5" alt="Avatar">
+      <img src="https://assets.edlin.app/images/rossedlin/03/rossedlin-03-100.jpg" alt="Avatar">
       <div class="overflow-hidden ms-3">
         <a class="text-dark mb-0 h6 d-block text-truncate" href="/page-chat">
           Ross Edlin
@@ -44,8 +44,7 @@
 
   <!-- Footer -->
   <div class="footer">
-    <form id="chat-form" method="post" action="/">
-      <input type="hidden" name="_token" value="">
+    <form id="chat-form">
       <input type="text" id="message" name="message" placeholder="Enter message...">
       <button type="submit" class="btn"></button>
     </form>
