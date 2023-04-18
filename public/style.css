@@ -10856,7 +10856,36 @@ img {
   box-sizing: border-box;
   list-style: none;
   margin-bottom: 0 !important;
-  padding: 1.5rem !important;
+  padding: 1rem !important;
+}
+.chat .left {
+  text-align: left;
+}
+.chat .right {
+  text-align: right;
+}
+.chat .message {
+  margin-bottom: 1rem;
+}
+.chat .message p {
+  display: inline-flex;
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  text-align: var(--bs-body-text-align);
+  font-family: "Nunito", sans-serif;
+  word-wrap: break-word;
+  list-style: none;
+  box-sizing: border-box;
+  font-size: 0.875em;
+  margin: 0.25rem;
+  padding: 0.5rem 1rem !important;
+  color: #6c757d !important;
+  background-color: rgba(var(--bs-light-rgb), 1) !important;
+  border-radius: var(--bs-border-radius) !important;
+}
+.chat .message img {
+  display: inline-flex;
+  margin: 0.25rem;
 }
 
 .footer {
