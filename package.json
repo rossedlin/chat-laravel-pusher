@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "bootstrap": "5.2",
+    "font-awesome": "4.7.0",
     "sass": "^1.59.3"
   }
 }

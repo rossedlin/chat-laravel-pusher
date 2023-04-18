@@ -8,13 +8,38 @@
     word-wrap: break-word;
     box-sizing: border-box;
     padding: 1rem 0 !important;
-    //box-shadow: 0 0 3px rgba(60, 72, 88, .15) !important;
-    //border-bottom-left-radius: 6px !important;
-    //border-bottom-right-radius: 6px !important;
     border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 
-    //@import "div";
-    @import "input";
-    @import "a";
-    @import "i";
+    input {
+        float: left;
+        display: inline-flex;
+        word-wrap: break-word;
+        box-sizing: border-box;
+        width: 75%;
+        padding: .375rem .75rem;
+        font-weight: 400;
+        background-color: #fff;
+        background-clip: padding-box;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        border: 1px solid #e9ecef;
+        font-size: 14px;
+        line-height: 26px;
+        border-radius: 6px;
+        color: #3c4858 !important;
+    }
+
+    button {
+        float: right;
+        display: inline-flex;
+        text-align: center;
+        cursor: pointer;
+        border: 5px solid #0D6EFDFF;
+        //background-color: #0D6EFDFF;
+        border-radius: 5px;
+
+        width: 2.5rem;
+        height: 2.5rem;
+
+        background: url("https://assets.edlin.app/icons/font-awesome/paper-plane/paper-plane-regular.svg") center no-repeat;
+    }
 }

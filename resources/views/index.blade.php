@@ -44,11 +44,10 @@
 
   <!-- Footer -->
   <div class="footer">
-    <form id="chat-form">
-      <input type="text" id="message" name="message" placeholder="Enter message...">
-      <button type="submit" class="btn"></button>
+    <form>
+      <input type="text" id="message" name="message" placeholder="Enter message..." autocomplete="off">
+      <button type="submit"></button>
     </form>
-
   </div>
   <!-- End Footer -->
 
@@ -75,7 +74,7 @@
       });
   });
 
-  $("#chat-form").submit(function (event) {
+  $("form").submit(function (event) {
     event.preventDefault();
 
     const data = {
@@ -85,7 +84,6 @@
 
     $.post("/", data)
       .done(function (res) {
-        console.log(res);
         $(".chat > .message").last().after(res.html);
         $(document).scrollTop($(document).height());
       });

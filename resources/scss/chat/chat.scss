@@ -44,6 +44,22 @@
         img {
             display: inline-flex;
             margin: 0.25rem;
+            font-weight: var(--bs-body-font-weight);
+            line-height: var(--bs-body-line-height);
+            text-align: var(--bs-body-text-align);
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            font-family: "Nunito", sans-serif;
+            font-size: 1rem;
+            color: #161c2d;
+            word-wrap: break-word;
+            box-sizing: border-box;
+            vertical-align: middle;
+            border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+            border-radius: 50% !important;
+            box-shadow: 0 0 3px rgba(60, 72, 88, .15) !important;
+            height: 45px;
+            width: 45px;
         }
     }
 }
