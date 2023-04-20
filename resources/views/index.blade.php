@@ -86,6 +86,7 @@
       }
     }).done(function (res) {
       $(".chat > .message").last().after(res.html);
+      $("form #message").val('');
       $(document).scrollTop($(document).height());
     });
   });
