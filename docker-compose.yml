@@ -2,15 +2,8 @@ version: '3.3'
 
 services:
   web:
-    image: rossedlin/php-apache:8.1
+    image: rossedlin/php-apache:8.1-nodejs-18
     ports:
       - "80:80"
     volumes:
       - ./:/var/www
-
-  build:
-    image: rossedlin/nodejs:18
-    profiles:
-      - donotstart
-    volumes:
-      - ./:/home/node/app
