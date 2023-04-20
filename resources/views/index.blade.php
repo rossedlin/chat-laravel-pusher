@@ -74,15 +74,20 @@
   $("form").submit(function (event) {
     event.preventDefault();
 
-    $.post("/", {
-      _token: '{{csrf_token()}}',
-      message: $("form #message").val(),
-      socket_id: pusher.connection.socket_id,
-    })
-      .done(function (res) {
-        $(".chat > .message").last().after(res.html);
-        $(document).scrollTop($(document).height());
-      });
+    $.ajax({
+      url: "/",
+      method: 'POST',
+      headers: {
+        'X-Socket-Id': pusher.connection.socket_id
+      },
+      data: {
+        _token: '{{csrf_token()}}',
+        message: $("form #message").val(),
+      }
+    }).done(function (res) {
+      $(".chat > .message").last().after(res.html);
+      $(document).scrollTop($(document).height());
+    });
   });
 
 </script>

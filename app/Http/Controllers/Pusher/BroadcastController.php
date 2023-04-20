@@ -18,7 +18,7 @@ class BroadcastController extends Controller
     {
         $message = $request->get('message') ?? 'You wrote a blank message';
 
-        event(new PusherBroadcast($message));
+        broadcast(new PusherBroadcast($message))->toOthers();
 
         return response()->json([
             'success' => true,
