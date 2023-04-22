@@ -55,19 +55,20 @@
 </body>
 
 <script>
-  const pusher = new Pusher('{{config('pusher.app.key')}}', {cluster: 'eu'});
-  const channel = pusher.subscribe('{{config('pusher.channel')}}');
+  const pusher = new Pusher('{{config('broadcasting.connections.pusher.key')}}', {cluster: 'eu'});
+  const channel = pusher.subscribe('public');
 
   //Receive messages
-  channel.bind('{{config('pusher.event')}}', function (data) {
+  channel.bind('chat', function (data) {
     $.post("/message", {
       _token: '{{csrf_token()}}',
       message: data.message,
     })
-      .done(function (res) {
-        $(".chat > .message").last().after(res.html);
-        $(document).scrollTop($(document).height());
-      });
+     .done(function (res) {
+       console.log(res);
+       $(".messages > .message").last().after(res);
+       $(document).scrollTop($(document).height());
+     });
   });
 
   //Send messages
@@ -85,7 +86,7 @@
         message: $("form #message").val(),
       }
     }).done(function (res) {
-      $(".chat > .message").last().after(res.html);
+      $(".messages > .message").last().after(res);
       $("form #message").val('');
       $(document).scrollTop($(document).height());
     });

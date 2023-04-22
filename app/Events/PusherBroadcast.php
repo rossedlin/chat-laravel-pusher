@@ -26,7 +26,7 @@ class PusherBroadcast implements ShouldBroadcast
      */
     public function broadcastOn(): array
     {
-        return [config('pusher.channel')];
+        return ['public'];
     }
 
     /**
@@ -34,6 +34,6 @@ class PusherBroadcast implements ShouldBroadcast
      */
     public function broadcastAs(): string
     {
-        return config('pusher.event');
+        return 'chat';
     }
 }

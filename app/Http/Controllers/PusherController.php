@@ -13,7 +13,7 @@ class PusherController extends Controller
     /**
      * @return Application|Factory|View
      */
-    public function __invoke(): View|Factory|Application
+    public function index(): View|Factory|Application
     {
         return view('index');
     }

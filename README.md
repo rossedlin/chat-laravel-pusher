@@ -43,14 +43,23 @@
   - `resources/views/left.blade.php`
   - `resources/views/right.blade.php`
 
+## www.pusher.com
+
+- Create Account
+- Create App
+- Copy API Keys
+
 ## Env
 
 Copy `.env.example` and name `.env` and populate the following API keys
 
-- `STRIPE_TEST_SK`
-- `STRIPE_TEST_PK`
-- `STRIPE_LIVE_SK`
-- `STRIPE_LIVE_PK`
+- `BROADCAST_DRIVER`
+
+
+- `PUSHER_APP_ID`
+- `PUSHER_APP_KEY`
+- `PUSHER_APP_SECRET`
+- `PUSHER_APP_CLUSTER`
 
 
 ## CSS
