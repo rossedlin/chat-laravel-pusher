@@ -618,7 +618,7 @@ progress {
   color: #6c757d;
 }
 
-.container,
+.container, .chat,
 .container-fluid,
 .container-xxl,
 .container-xl,
@@ -635,27 +635,27 @@ progress {
 }
 
 @media (min-width: 576px) {
-  .container-sm, .container {
+  .container-sm, .container, .chat {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container {
+  .container-md, .container-sm, .container, .chat {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container {
+  .container-lg, .container-md, .container-sm, .container, .chat {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xl, .container-lg, .container-md, .container-sm, .container, .chat {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, .chat {
     max-width: 1320px;
   }
 }
@@ -3711,7 +3711,7 @@ textarea.form-control-lg {
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
-.navbar > .container,
+.navbar > .container, .navbar > .chat,
 .navbar > .container-fluid,
 .navbar > .container-sm,
 .navbar > .container-md,
@@ -13813,6 +13813,25 @@ textarea.form-control-lg {
 .chat {
   margin-top: 5rem;
   margin-bottom: 3rem;
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  text-align: var(--bs-body-text-align);
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: #161c2d;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  word-wrap: break-word;
+  background-clip: initial;
+  border: 0 !important;
+  margin-top: 1.5rem !important;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(60, 72, 88, 0.15) !important;
+  border-radius: 6px !important;
 }
 .chat .top {
   font-weight: var(--bs-body-font-weight);

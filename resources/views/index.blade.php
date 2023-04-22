@@ -17,10 +17,10 @@
 </head>
 
 <body>
-<div class="container">
+<div class="chat">
 
   <!-- Header -->
-  <div class="header">
+  <div class="top">
     <div class="d-flex">
       <img src="https://assets.edlin.app/images/rossedlin/03/rossedlin-03-100.jpg" alt="Avatar">
       <div class="overflow-hidden ms-3">
@@ -36,14 +36,14 @@
   <!-- End Header -->
 
   <!-- Chat -->
-  <div class="chat">
+  <div class="messages">
     @include('left', ['message' => "Hey! What's up!  👋"])
     @include('left', ['message' => "Ask a friend to open this link and you can chat with them!"])
   </div>
   <!-- End Chat -->
 
   <!-- Footer -->
-  <div class="footer">
+  <div class="bottom">
     <form>
       <input type="text" id="message" name="message" placeholder="Enter message..." autocomplete="off">
       <button type="submit"></button>
