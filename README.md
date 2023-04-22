@@ -6,7 +6,9 @@
 
 # Chat Laravel Pusher
 
----
+I built a Chat Application using Laravel & Pusher where you can chat with all your friends in any location throughout the world.
+Simply open up the website in your browser and start chatting!
+And I built this in within 5 minutes!
 
 ## Requirements
 
@@ -33,7 +35,9 @@
   - broadcast()
   - message()
 
-[//]: # (- `config/stripe.php`)
+
+- `app/Events/PusherBroadcast.php`
+
 
 - `routes/web.php`
 
