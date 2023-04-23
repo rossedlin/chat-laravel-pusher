@@ -6,7 +6,8 @@
 
 # Chat Laravel Pusher
 
-I built a Chat Application using Laravel & Pusher where you can chat with all your friends in any location, just open up the website in your browser and start chatting!
+I built a Chat Application using Laravel & Pusher where you can chat with all your friends in any location,
+just open up the website in your browser and start chatting!
 And I built this in within * minutes!
 
 ## Requirements
@@ -29,28 +30,23 @@ And I built this in within * minutes!
 
 ## Code
 
-- Placeholders
-    - `resources/views/index.blade.php`
-    - `resources/views/left.blade.php`
-    - `resources/views/right.blade.php`
+
+- `routes/web.php`
 
 
 - `app/Http/Controllers/PusherController.php`
-  - index()
-  - broadcast()
-  - message()
+    - index()
+    - broadcast()
+    - receive()
 
 
 - `app/Events/PusherBroadcast.php`
 
 
-- `routes/web.php`
-
-
 - Code
-  - `resources/views/index.blade.php`
-  - `resources/views/left.blade.php`
-  - `resources/views/right.blade.php`
+    - `resources/views/index.blade.php`
+    - `resources/views/broadcast.blade.php`
+    - `resources/views/receive.blade.php`
 
 ## www.pusher.com
 
@@ -70,14 +66,11 @@ Copy `.env.example` and name `.env` and populate the following API keys
 - `PUSHER_APP_SECRET`
 - `PUSHER_APP_CLUSTER`
 
-
 ## CSS
 
 Copy style css from the live system
 
 - `https://chat.laravel.pusher.edlin.app/style.css`
-
-
 
 ## Deploy
 

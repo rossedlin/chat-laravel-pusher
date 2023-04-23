@@ -1,7 +1,7 @@
 image: rossedlin/php-apache:8.1
 pipelines:
   branches:
-    master:
+    '{master,youtube}':
       # Test
       - step:
           name: Test
