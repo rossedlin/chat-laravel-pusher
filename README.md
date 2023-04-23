@@ -6,9 +6,8 @@
 
 # Chat Laravel Pusher
 
-I built a Chat Application using Laravel & Pusher where you can chat with all your friends in any location throughout the world.
-Simply open up the website in your browser and start chatting!
-And I built this in within 5 minutes!
+I built a Chat Application using Laravel & Pusher where you can chat with all your friends in any location, just open up the website in your browser and start chatting!
+And I built this in within * minutes!
 
 ## Requirements
 
