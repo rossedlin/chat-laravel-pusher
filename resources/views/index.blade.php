@@ -76,7 +76,7 @@
     event.preventDefault();
 
     $.ajax({
-      url: "/",
+      url: "/broadcast",
       method: 'POST',
       headers: {
         'X-Socket-Id': pusher.connection.socket_id
