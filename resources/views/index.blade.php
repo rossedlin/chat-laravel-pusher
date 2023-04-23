@@ -60,7 +60,7 @@
 
   //Receive messages
   channel.bind('chat', function (data) {
-    $.post("/message", {
+    $.post("/receive", {
       _token: '{{csrf_token()}}',
       message: data.message,
     })
@@ -71,7 +71,7 @@
      });
   });
 
-  //Send messages
+  //Broadcast messages
   $("form").submit(function (event) {
     event.preventDefault();
 
