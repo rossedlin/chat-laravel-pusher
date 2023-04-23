@@ -21,16 +21,10 @@
 
   <!-- Header -->
   <div class="top">
-    <div class="d-flex">
-      <img src="https://assets.edlin.app/images/rossedlin/03/rossedlin-03-100.jpg" alt="Avatar">
-      <div class="overflow-hidden ms-3">
-        <a class="text-dark mb-0 h6 d-block text-truncate" href="/page-chat">
-          Ross Edlin
-        </a>
-        <small class="text-muted">
-          <i class="mdi mdi-checkbox-blank-circle text-success on-off align-text-bottom"></i> Online
-        </small>
-      </div>
+    <img src="https://assets.edlin.app/images/rossedlin/03/rossedlin-03-100.jpg" alt="Avatar">
+    <div>
+      <p>Ross Edlin</p>
+      <small>Online</small>
     </div>
   </div>
   <!-- End Header -->
@@ -55,13 +49,13 @@
 </body>
 
 <script>
-  const pusher = new Pusher('{{config('broadcasting.connections.pusher.key')}}', {cluster: 'eu'});
+  const pusher  = new Pusher('{{config('broadcasting.connections.pusher.key')}}', {cluster: 'eu'});
   const channel = pusher.subscribe('public');
 
   //Receive messages
   channel.bind('chat', function (data) {
     $.post("/receive", {
-      _token: '{{csrf_token()}}',
+      _token:  '{{csrf_token()}}',
       message: data.message,
     })
      .done(function (res) {
@@ -76,13 +70,13 @@
     event.preventDefault();
 
     $.ajax({
-      url: "/broadcast",
-      method: 'POST',
+      url:     "/broadcast",
+      method:  'POST',
       headers: {
         'X-Socket-Id': pusher.connection.socket_id
       },
-      data: {
-        _token: '{{csrf_token()}}',
+      data:    {
+        _token:  '{{csrf_token()}}',
         message: $("form #message").val(),
       }
     }).done(function (res) {
