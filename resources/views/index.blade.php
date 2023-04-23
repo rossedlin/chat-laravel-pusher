@@ -37,8 +37,8 @@
 
   <!-- Chat -->
   <div class="messages">
-    @include('left', ['message' => "Hey! What's up!  👋"])
-    @include('left', ['message' => "Ask a friend to open this link and you can chat with them!"])
+    @include('receive', ['message' => "Hey! What's up!  👋"])
+    @include('receive', ['message' => "Ask a friend to open this link and you can chat with them!"])
   </div>
   <!-- End Chat -->
 
