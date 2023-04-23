@@ -30,10 +30,8 @@ And I built this in within * minutes!
 
 ## Code
 
-- Placeholders
-    - `resources/views/index.blade.php`
-    - `resources/views/broadcast.blade.php`
-    - `resources/views/receive.blade.php`
+
+- `routes/web.php`
 
 
 - `app/Http/Controllers/PusherController.php`
@@ -43,9 +41,6 @@ And I built this in within * minutes!
 
 
 - `app/Events/PusherBroadcast.php`
-
-
-- `routes/web.php`
 
 
 - Code

@@ -59,7 +59,6 @@
       message: data.message,
     })
      .done(function (res) {
-       console.log(res);
        $(".messages > .message").last().after(res);
        $(document).scrollTop($(document).height());
      });
