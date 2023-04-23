@@ -30,6 +30,12 @@ And I built this in within 5 minutes!
 
 ## Code
 
+- Placeholders
+    - `resources/views/index.blade.php`
+    - `resources/views/left.blade.php`
+    - `resources/views/right.blade.php`
+
+
 - `app/Http/Controllers/PusherController.php`
   - index()
   - broadcast()
@@ -42,7 +48,7 @@ And I built this in within 5 minutes!
 - `routes/web.php`
 
 
-- `resources/views/*`
+- Code
   - `resources/views/index.blade.php`
   - `resources/views/left.blade.php`
   - `resources/views/right.blade.php`
