@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   web:
-    image: rossedlin/php-apache:8.1-nodejs-18
+    image: rossedlin/php-apache:8.1
     ports:
       - "80:80"
     volumes:
