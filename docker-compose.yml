@@ -1,6 +1,6 @@
 services:
   web:
-    image: rossedlin/php-apache:8.1
+    image: rossedlin/php-apache:8.2
     ports:
       - "80:80"
     volumes:
