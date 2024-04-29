@@ -1,6 +1,7 @@
 {
   "license": "MIT",
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "5.3.3",
     "font-awesome": "4.7.0",
     "sass": "1.74.1"
