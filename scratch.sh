@@ -24,7 +24,7 @@ rm -Rf ~/Projects/chat-laravel-pusher-scratch
 #
 # Install
 #
-composer create-project laravel/laravel=10.* chat-laravel-pusher-scratch
+composer create-project laravel/laravel=11.* chat-laravel-pusher-scratch
 cd ~/Projects/chat-laravel-pusher-scratch || exit 1;
 
 #
@@ -48,15 +48,16 @@ git add .
 git commit -m "Docker"
 
 #
+# Artisan
+#
+docker compose run --rm web bash -c "php artisan install:broadcasting"
+docker compose run --rm web bash -c "php artisan make:model File"
+docker compose run --rm web bash -c "php artisan make:event PusherBroadcast"
+
+#
 # Composer
 #
 docker compose run --rm web bash -c "composer require pusher/pusher-php-server"
-
-#
-# Artisan
-#
-docker compose run --rm web bash -c "php artisan make:model File"
-docker compose run --rm web bash -c "php artisan make:event PusherBroadcast"
 
 #
 # GitHub Overrides
