@@ -1,0 +1,30 @@
+name: Tests
+
+on:
+  push:
+    branches: ["*"]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    container: rossedlin/php-apache:8.2
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Verify PHP
+        run: php -v
+
+      - name: List all files
+        run: ls -la
+
+      - name: Install Dependencies
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Copy .env
+        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+
+      - name: Generate key
+        run: php artisan key:generate
+
+      - name: Unit and Feature Tests via PHPUnit
+        run: vendor/bin/phpunit
