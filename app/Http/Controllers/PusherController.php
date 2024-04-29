@@ -10,19 +10,32 @@ use Illuminate\Http\Request;
 
 class PusherController extends Controller
 {
-    public function index()
+    /**
+     * @return Application|Factory|View
+     */
+    public function index(): Factory|View|Application
     {
         return view('index');
     }
 
-    public function broadcast(Request $request)
+    /**
+     * @param Request $request
+     *
+     * @return Application|Factory|View
+     */
+    public function broadcast(Request $request): Factory|View|Application
     {
         broadcast(new PusherBroadcast($request->get('message')))->toOthers();
 
         return view('broadcast', ['message' => $request->get('message')]);
     }
 
-    public function receive(Request $request)
+    /**
+     * @param Request $request
+     *
+     * @return Application|Factory|View
+     */
+    public function receive(Request $request): Factory|View|Application
     {
         return view('receive', ['message' => $request->get('message')]);
     }

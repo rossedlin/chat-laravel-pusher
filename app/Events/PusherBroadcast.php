@@ -13,16 +13,25 @@ class PusherBroadcast implements ShouldBroadcast
 
     public string $message;
 
+    /**
+     * @param string $message
+     */
     public function __construct(string $message)
     {
         $this->message = $message;
     }
 
+    /**
+     * @return string[]
+     */
     public function broadcastOn(): array
     {
         return ['public'];
     }
 
+    /**
+     * @return string
+     */
     public function broadcastAs(): string
     {
         return 'chat';
