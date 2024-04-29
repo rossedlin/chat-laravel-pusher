@@ -5,6 +5,7 @@
 docker container prune -f
 rm -R node_modules
 rm -R vendor
+rm composer.lock
 rm yarn.lock
 
 #
