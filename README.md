@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://www.codewithross.com/" target="_blank">
-        <img src="https://assets.edlin.app/logo/codewithross/logo-dark.svg" width="400" alt="Code with Ross Logo">
+        <img src="https://assets.edlin.app/codewithross/logo/logo-dark.svg" width="400" alt="Code with Ross Logo">
     </a>
 </p>
 
